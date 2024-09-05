@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador de Autos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Autitos</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-  <h1>Simulador de Autitos</h1>
-  <label for="commandInput">Ingrese los comandos:</label>
-  <input type="text" id="commandInput">
-  <button id="executeButton">Ejecutar</button>
-  <button id="resetButton">Reiniciar</button>
+    <h1>Simulador de Autitos</h1>
+    
+    <label for="commandInput">Ingrese los comandos:</label>
+    <input type="text" id="commandInput">
+    <button id="executeButton">Ejecutar</button>
+    <button id="resetButton">Reiniciar</button>
+    
+    <p id="output">Posición Final: </p>
 
-  <p id="output">Posición Final: </p>
+    <h2>Movimiento del Auto</h2>
+    <div class="grid" id="grid-container"></div>
 
-  <h2>Movimiento del Auto</h2>
-  <div class="grid" id="grid-container"></div>
+    <div class="controls">
+        <h3>Controles Manuales</h3>
+        <button id="leftButton">Izquierda</button>
+        <button id="rightButton">Derecha</button>
+        <button id="advanceButton">Avanzar</button>
+    </div>
 
-  <script type="module" src="scripts.js"></script>
+    <div id="history">
+        <h3>Historial de Movimientos</h3>
+        <ul id="movementHistory"></ul>
+
+    </div>
+    
+    <script type="module" src="./scripts.js"></script>
 </body>
 </html>
