@@ -31,7 +31,18 @@ export const manualMove = (command, currentX, currentY, currentDirection, gridSi
     }
 
     moveCar(currentX, currentY, gridSize.maxY);
-    // updateHistory(`${currentX},${currentY}${currentDirection}`);
+    updateHistory(`${currentX},${currentY}${currentDirection}`);
     
     return { currentX, currentY, currentDirection };
+}
+
+export const updateHistory = move => {
+    const historyList = document.getElementById('movementHistory');
+    if (historyList) {
+        const listItem = document.createElement('li');
+        listItem.textContent = move;
+        historyList.appendChild(listItem);
+    } else {
+        console.error('Elemento historyList no encontrado.');
+    }
 }
