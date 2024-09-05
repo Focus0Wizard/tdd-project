@@ -1,7 +1,7 @@
 let  gridSize;
 
 export const createGrid = (columns, rows, gridContainer) => {
-    gridSize = { maxX: columns - 1, maxY: rows - 1 };
+    gridSize = { maxX: columns - 1, maxY: rows - 1 };  // Actualiza gridSize
     gridContainer.innerHTML = '';
     gridContainer.style.gridTemplateColumns = `repeat(${columns}, 50px)`;
     gridContainer.style.gridTemplateRows = `repeat(${rows}, 50px)`;
@@ -13,4 +13,4 @@ export const createGrid = (columns, rows, gridContainer) => {
             gridContainer.appendChild(cell);
         }
     }
-};
+}
